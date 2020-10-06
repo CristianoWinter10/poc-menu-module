@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    tools:context=".menu.MenuDialogFragment"
+    android:background="#1313131A">
+
+    <ImageButton
+        android:id="@+id/btClose"
+        android:layout_margin="8dp"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="#e3e3e3"
+        android:src="@android:drawable/arrow_down_float"
+        android:tint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listMenuItems"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_menu_dialog_item"
+        tools:itemCount="5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btClose" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listMenuItems" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/viewSeparator">
+
+        <TextView
+            android:id="@+id/tvConfig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/configuracoes"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/sync"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:tint="@android:color/black"
+            android:background="@android:color/transparent"
+            android:drawableStart="@android:drawable/ic_popup_sync"
+            android:drawableTint="@android:color/black"
+            android:text="Sync"
+            android:textAlignment="textStart"
+            android:drawablePadding="32dp"
+
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvConfig"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:tint="@android:color/black"
+            android:background="@android:color/transparent"
+            android:drawableStart="@android:drawable/ic_lock_lock"
+            android:drawableTint="@android:color/black"
+            android:text="Logout"
+            android:textAlignment="textStart"
+            android:drawablePadding="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sync"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

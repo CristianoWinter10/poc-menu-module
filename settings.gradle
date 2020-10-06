@@ -1,0 +1,5 @@
+include ':tasksfeature'
+include ':kpifeature'
+include ':visitfeature'
+include ':app'
+rootProject.name = "Poc Menu"

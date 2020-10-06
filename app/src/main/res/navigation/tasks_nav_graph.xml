@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tasks_nav_graph"
+    app:startDestination="@id/tasks_nav_graph">
+
+    <!-- Account  dynamic feature module -->
+    <include-dynamic
+        android:id="@+id/tasks_nav_graph"
+        android:name="com.ontappoc.tasksfeature"
+        app:graphResName="tasks_nav_graph"
+        app:moduleName="tasksfeature">
+    </include-dynamic>
+
+</navigation>

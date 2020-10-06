@@ -1,0 +1,10 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_page_kpi">First Page Kpi</string>
+    <string name="go_to_second_page_kpi">Go to Second Page Kpi</string>
+    <string name="second_page_kpi">Second Page Kpi</string>
+    <string name="go_to_first_page_visit">Go to first visit page</string>
+    <string name="go_to_second_page_visit">Go to second visit page</string>
+    <string name="go_to_module_visit">Go to module visit</string>
+</resources>

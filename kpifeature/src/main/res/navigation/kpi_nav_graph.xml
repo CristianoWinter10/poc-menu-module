@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/kpi_nav_graph"
+    app:startDestination="@id/kpiFirstPageFragment">
+
+    <fragment
+        android:id="@+id/kpiFirstPageFragment"
+        android:name="com.ontappoc.kpifeature.KpiFirstPageFragment"
+        android:label="fragment_kpi_first_page"
+        tools:layout="@layout/fragment_kpi_first_page" >
+        <action
+            android:id="@+id/action_kpiFirstPageFragment_to_kpiSecondPageFragment"
+            app:destination="@id/kpiSecondPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kpiSecondPageFragment"
+        android:name="com.ontappoc.kpifeature.KpiSecondPageFragment"
+        android:label="kpi_second_page_fragment"
+        tools:layout="@layout/kpi_second_page_fragment" >
+        <action
+            android:id="@+id/action_kpiSecondPageFragment_to_visit_nav_graph"
+            app:destination="@id/visit_nav_graph" />
+        <action
+            android:id="@+id/action_kpiSecondPageFragment_to_VisitFirstPageFragment"
+            app:destination="@id/VisitFirstPageFragment" />
+        <action
+            android:id="@+id/action_kpiSecondPageFragment_to_VisitSecondPageFragment"
+            app:destination="@id/VisitSecondPageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/VisitFirstPageFragment"
+        app:moduleName="visitfeature"
+        android:name="com.ontappoc.visitfeature.VisitFirstPageFragment"/>
+
+    <fragment
+        android:id="@+id/VisitSecondPageFragment"
+        app:moduleName="visitfeature"
+        android:name="com.ontappoc.visitfeature.VisitSecondPageFragment"/>
+
+    <include-dynamic
+        android:id="@id/visit_nav_graph"
+        android:name="com.ontappoc.visitfeature"
+        app:graphResName="visit_nav_graph"
+        app:moduleName="visitfeature">
+    </include-dynamic>
+</navigation>

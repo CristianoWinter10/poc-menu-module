@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/visit_nav_graph"
+    app:startDestination="@id/visitFirstPageFragment">
+
+    <fragment
+        android:id="@+id/visitFirstPageFragment"
+        android:name="com.ontappoc.visitfeature.VisitFirstPageFragment"
+        android:label="fragment_visit_first_page"
+        tools:layout="@layout/fragment_visit_first_page" >
+        <action
+            android:id="@+id/action_visitFirstPageFragment_to_visitSecondPageFragment"
+            app:destination="@id/visitSecondPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/visitSecondPageFragment"
+        android:name="com.ontappoc.visitfeature.VisitSecondPageFragment"
+        android:label="visit_second_page_fragment"
+        tools:layout="@layout/visit_second_page_fragment" />
+</navigation>
